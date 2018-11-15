@@ -1,23 +1,22 @@
-const Dragon = require(`./dragon.js`)
+// const Geneartion = require('./generation');
 
-const foo = new Dragon({ 
-    bday: "Luis bday", 
-    nickName: "Luis Name" 
-});
+// const generation = new Geneartion;
+// console.log('generation:\n', generation, '\n');
 
-const zeek = new Dragon({ 
-    bday: new Date(), 
-    nickName: "Zeek Name",
-    traits: [{type: "backgroundColor", traitValue: "green"}]
-});
+// const odin = generation.newDragon();
+// console.log("new drag Odin: ", odin, '\n');
 
-const prince = new Dragon();
+// setTimeout(() => {
+//     const maria = generation.newDragon();
+//     console.log('maria:', maria, '\n');
+// }, 10000);
 
-setTimeout(() => {
-    const odin = new Dragon();
-    console.log(`odin`, odin);
-}, 3000);
+const GenerationEgine = require('./engine.js');
 
-console.log(`foo`, foo);
-console.log(`zeek`, zeek);
-console.log(`prince`, prince);
+const engine = new GenerationEgine();
+
+engine.start();
+
+setTimeout( () => {
+    engine.stop();
+}, 20000);
