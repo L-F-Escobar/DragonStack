@@ -1,3 +1,3 @@
 node.js - for backend
     - an enviroment that runs js code
-    - a machine that will run a serve that can supply information
+    - a machine that will run a serve that can supply information 
