@@ -1,37 +1,22 @@
-// const Dragon = require(`./dragon.js`)
+// const Geneartion = require('./generation');
 
-// const foo = new Dragon({ 
-//     bday: "Luis bday", 
-//     nickName: "Luis Name" 
-// });
+// const generation = new Geneartion;
+// console.log('generation:\n', generation, '\n');
 
-// const zeek = new Dragon({ 
-//     bday: new Date(), 
-//     nickName: "ZEEK",
-//     traits: [{type: "backgroundColor", traitValue: "black"}]
-// });
-
-// // const prince = new Dragon();
+// const odin = generation.newDragon();
+// console.log("new drag Odin: ", odin, '\n');
 
 // setTimeout(() => {
-//     const odin = new Dragon();
-//     console.log(`odin`, odin);
-// }, 3000);
+//     const maria = generation.newDragon();
+//     console.log('maria:', maria, '\n');
+// }, 10000);
 
-// // console.log(`foo`, foo);
-// console.log(`zeek`, zeek);
-// console.log();
-// // console.log(`prince`, prince);
+const GenerationEgine = require('./engine.js');
 
-const Geneartion = require('./generation');
+const engine = new GenerationEgine();
 
-const generation = new Geneartion;
-console.log('generation:\n', generation);
+engine.start();
 
-const odin = generation.newDragon();
-console.log("new drag Odin: ", odin);
-
-setTimeout(() => {
-    const maria = generation.newDragon();
-    console.log('maria:', maria);
-}, 5000);
+setTimeout( () => {
+    engine.stop();
+}, 20000);

@@ -24,6 +24,10 @@ class Generation {
         }
         return new Dragon();
     }
+
+    getTime() {
+        return this.expiration;
+    }
 }
 
 module.exports = Generation;
