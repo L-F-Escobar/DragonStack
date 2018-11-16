@@ -11,12 +11,23 @@
 //     console.log('maria:', maria, '\n');
 // }, 10000);
 
-const GenerationEgine = require('./engine.js');
 
+// express is a represantation of a web server application full of helper methods
+const express = require('express');
+const GenerationEgine = require('./generation/engine.js');
+
+const app = express();
 const engine = new GenerationEgine();
 
 engine.start();
 
-setTimeout( () => {
-    engine.stop();
-}, 20000);
+// (url, callback func)
+// req = request 
+// res = response
+app.get('/dragon/new', (req, res) => {
+    res.json({ dragon: engine.generation.newDragon() });
+});
+
+
+
+module.exports = app;

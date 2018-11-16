@@ -1,3 +1,8 @@
 node.js - for backend
     - an enviroment that runs js code
     - a machine that will run a serve that can supply information 
+
+express.js - create api layer of full stack app
+    - framework within node.js
+    - create API calls
+    - ability to create a web server - turn backend into a runnign program that can listen to request 

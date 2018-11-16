@@ -1,5 +1,6 @@
-const { REFRESH_RATE, SECONDS } = require(`./config`);
-const Dragon = require("./dragon.js");
+const Dragon = require("../dragon.js");
+const { REFRESH_RATE, SECONDS } = require(`../config`);
+
 
 const refreshRate = REFRESH_RATE * SECONDS;
 
