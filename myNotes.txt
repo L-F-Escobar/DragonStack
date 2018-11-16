@@ -6,3 +6,6 @@ express.js - create api layer of full stack app
     - framework within node.js
     - create API calls
     - ability to create a web server - turn backend into a runnign program that can listen to request 
+
+postgresql - relational database
+    - structures data in relations to other peices of data
