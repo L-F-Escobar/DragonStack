@@ -9,3 +9,4 @@ express.js - create api layer of full stack app
 
 postgresql - relational database
     - structures data in relations to other peices of data
+    - associative entries
