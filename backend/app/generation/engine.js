@@ -1,4 +1,5 @@
 const Geneartion = require('./index.js');
+const GenerationTable = require('./table.js');
 
 class GenerationEngine {
     constructor() {
@@ -17,7 +18,7 @@ class GenerationEngine {
     buildNewGeneration() {
         const generation = new Geneartion();
 
-        GeneartionTable.storeGeneration(generation)
+        GenerationTable.storeGeneration(generation)
             .then(({ generationId }) => {
                 this.generation = generation;
 
