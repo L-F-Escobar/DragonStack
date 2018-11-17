@@ -1,3 +1,4 @@
+
 const TRAITS = require("../data/traits.json");
 
 const DEFFAULT_PROPERTIES = {

@@ -8,6 +8,7 @@ class Generation {
     constructor() {
         this.expiration = this.calcExpiration();
         this.generationId = undefined;
+
     }
 
     calcExpiration() {

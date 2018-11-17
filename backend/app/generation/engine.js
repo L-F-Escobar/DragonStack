@@ -1,5 +1,4 @@
 const Geneartion = require('./index.js');
-const GeneartionTable = require('./table.js');
 
 class GenerationEngine {
     constructor() {
@@ -32,6 +31,7 @@ class GenerationEngine {
                 );
             })
             .catch(error => console.log(error));
+
     }
 }
 
