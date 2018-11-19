@@ -14,3 +14,11 @@ postgresql - relational database
 promise - guaranteed future of an eventual value.
     - complettion or failure of an asynchronous operation
     - enforce order and coordinate asych behavior
+
+chaining 
+    - returns promises as the result of promises
+    - ENFORCE ORDER over asychronous tasks by chaining handlers
+    
+handlers
+    - .then resolved value
+    - .catch rejected error

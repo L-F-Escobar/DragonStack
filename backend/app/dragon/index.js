@@ -1,8 +1,9 @@
 
-const TRAITS = require("../data/traits.json");
+const TRAITS = require("../../data/traits.json");
 
 const DEFFAULT_PROPERTIES = {
     nickName: "unnamed",
+    generationId: undefined,
     get bday() {
         return new Date()
     },
@@ -25,12 +26,11 @@ const DEFFAULT_PROPERTIES = {
 class Dragon {
     // ({ map/dict })
     // Non-ordered perameter
-    constructor({ bday, nickName, traits } = {}) {
-        // console.log(`bday`, bday);
-        // console.log(`nickName`, nickName);
+    constructor({ bday, nickName, traits, generationId } = {}) {
         this.bday = bday || DEFFAULT_PROPERTIES.bday;
         this.nickName = nickName || DEFFAULT_PROPERTIES.nickName;
         this.traits = traits || DEFFAULT_PROPERTIES.randomTraits;
+        this.generationId = generationId || DEFFAULT_PROPERTIES.generationId;
     }
 }
 
