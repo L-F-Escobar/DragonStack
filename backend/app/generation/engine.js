@@ -1,5 +1,5 @@
 const Geneartion = require('./index.js');
-const { GenerationTable, DragonTable } = require('./table.js');
+const GenerationTable = require('./table.js');
 
 class GenerationEngine {
     constructor() {
