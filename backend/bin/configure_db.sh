@@ -12,4 +12,10 @@ psql -U node_user dragonstackdb < ./bin/sql/generation.sql
 # echo "dragonstackdb 1"
 psql -U node_user dragonstackdb < ./bin/sql/dragon.sql
 
+psql -U node_user dragonstackdb < ./bin/sql/trait.sql
+
+psql -U node_user dragonstackdb < ./bin/sql/dragonTrait.sql
+
+node ./bin/insertTraits.js
+
 echo "dragonstackdb configured"
