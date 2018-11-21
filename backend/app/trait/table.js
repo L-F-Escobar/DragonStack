@@ -3,7 +3,7 @@ const pool = require(`../../databasePool.js`);
 class TraitTable {
     static getTraitId({ traitType, traitValue }) {
 
-        console.log(`traitType::traitValue === ${traitType}::${traitValue}`);
+        // console.log(`traitType::traitValue === ${traitType}::${traitValue}`);
 
         return new Promise( (resolve, reject) => {
             pool.query(

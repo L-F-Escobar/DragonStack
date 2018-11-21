@@ -2,6 +2,7 @@
 const TRAITS = require("../../data/traits.json");
 
 const DEFFAULT_PROPERTIES = {
+    dragonId: undefined,
     nickName: "unnamed",
     generationId: undefined,
     get bday() {
@@ -26,7 +27,8 @@ const DEFFAULT_PROPERTIES = {
 class Dragon {
     // ({ map/dict })
     // Non-ordered perameter
-    constructor({ bday, nickName, traits, generationId } = {}) {
+    constructor({ dragonId, bday, nickName, traits, generationId } = {}) {
+        this.dragonId = dragonId || DEFFAULT_PROPERTIES.dragonId;
         this.bday = bday || DEFFAULT_PROPERTIES.bday;
         this.nickName = nickName || DEFFAULT_PROPERTIES.nickName;
         this.traits = traits || DEFFAULT_PROPERTIES.randomTraits;

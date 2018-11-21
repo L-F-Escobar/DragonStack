@@ -7,7 +7,6 @@ class GenerationTable {
             pool.query(
                 'INSERT INTO generation(expiration) VALUES($1) RETURNING id',
                 [generation.expiration],
-                // response = array of return values.
                 (error, response) => {
                     if (error) return reject(error);
     
