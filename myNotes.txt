@@ -22,3 +22,9 @@ chaining
 handlers
     - .then resolved value
     - .catch rejected error
+
+
+For configuring psql tables in configure_db.sh
+ls -l bin (look for configure file needs x executable)
+chmod +x bin/configure_db.sh
+ls -l bin (should have executable permission)
