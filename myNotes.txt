@@ -23,8 +23,34 @@ handlers
     - .then resolved value
     - .catch rejected error
 
-
+`DB POINTS TO TAKE AWAY`
 For configuring psql tables in configure_db.sh
 ls -l bin (look for configure file needs x executable)
 chmod +x bin/configure_db.sh
 ls -l bin (should have executable permission)
+
+
+
+----- FRONT END -----
+
+FRONT END NPM INSTALLS
+npm init -y
+npm i babel-preset-env@1.6.1 babel-preset-react@6.24.1 babel-plugin-transform-class-properties@6.24.1 --save-dev
+
+- <div> tag
+    - a container unit that encapsulates other page elements and divides the HTML document into sections.
+
+- <h1> tag
+    - usually the title of a post, or other emphasized text on the page.
+
+
+DOM
+    - Document Object Modle represents the page. Tree like object oriented strucutre of the html
+    - https://www.udemy.com/full-stack/learn/v4/t/lecture/11621556?start=15
+
+- Model-View-Controller archeture pattern
+    - React.js does not use this Model
+
+- React.js
+    - Allows us to write mordern js and react sytax for our code & code will be portable to pretty much any browser 
+      npm i babel-preset-env@1.6.1 babel-preset-react@6.42.1 babel-plugin-transform-class-properties@6.24.1 --save-dev
