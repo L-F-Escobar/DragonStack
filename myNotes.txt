@@ -61,3 +61,10 @@ DOM
 
 - Procfile
     - Foreman will use the Procfile to start the relevant processes. 
+
+- CORS corse origin resource sharing (to backend)
+    - middle ware to use in express application
+    - in backend - npm i cors@2.8.4
+
+- Same origin policy
+    - https://www.udemy.com/full-stack/learn/v4/t/lecture/11555806?start=0
