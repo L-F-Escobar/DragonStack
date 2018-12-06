@@ -58,7 +58,8 @@ DOM
 - Start both the backend and the frontend in a single script.
 - Foreman
     - a node tool which allows us to start multiple processes on a single window of the command line
-
+    - https://www.udemy.com/full-stack/learn/v4/t/lecture/11708274?start=0
+    
 - Procfile
     - Foreman will use the Procfile to start the relevant processes. 
 

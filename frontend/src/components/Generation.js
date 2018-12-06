@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
+const DEFAULT_GENERATION = { generationId: "", expiration: ""};
+
 // By extending, this class gets preloaded with a much of methods & properties.
 class Generation extends Component {
-    state = { generation: { generationId: 999, expiration: "2020-06-30" } };
+    state = { generation: DEFAULT_GENERATION };
     // constructor() {
     //     this.state = {};
     // } //same thing
@@ -13,7 +15,13 @@ class Generation extends Component {
     
     fetchGeneration = () => {
         fetch("http://localhost:5000/generation")
-            .then( response => console.log('response6666', response));
+            .then(response => response.json())
+            .then(json => {
+                console.log('json:', json)
+
+                this.setState({ generation: json.generation });
+            })
+            .catch(error => console.log('error', error));
     }
     
     render() {
