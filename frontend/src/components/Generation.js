@@ -1,27 +1,48 @@
 import React, { Component } from 'react';
 
 const DEFAULT_GENERATION = { generationId: "", expiration: ""};
+const MINIMUM_DELAY = 3000;
 
 // By extending, this class gets preloaded with a much of methods & properties.
 class Generation extends Component {
     state = { generation: DEFAULT_GENERATION };
+    timer = null;
     // constructor() {
     //     this.state = {};
     // } //same thing
 
+    // Life cycle hook
     componentDidMount() {
-        this.fetchGeneration();
+        this.fetchNextGeneration();
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timer);
     }
     
     fetchGeneration = () => {
         fetch("http://localhost:5000/generation")
             .then(response => response.json())
             .then(json => {
-                console.log('json:', json)
+                console.log('json:', json);
 
                 this.setState({ generation: json.generation });
             })
             .catch(error => console.log('error', error));
+    }
+
+    fetchNextGeneration = () => {
+        this.fetchGeneration();
+
+        // let allows us to re-assign the local variable later
+        let delay = new Date(this.state.generation.expiration).getTime() - 
+                    new Date().getTime();
+
+        if (delay < MINIMUM_DELAY) {
+            delay = MINIMUM_DELAY;
+        };
+
+        this.timer = setTimeout(() => this.fetchNextGeneration(), delay);
     }
     
     render() {
