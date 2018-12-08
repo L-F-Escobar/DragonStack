@@ -10,6 +10,7 @@ render(
     <div>
         <h2>Dragon Stack from React</h2>
         <Generation />
+        <Dragon />
     </div>,
     // document obj is powerful - its a representations of the entire DOM, 
     // with inner helper methods like the one used; to help locate specific 
