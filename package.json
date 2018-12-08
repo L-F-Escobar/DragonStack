@@ -1,0 +1,22 @@
+{
+  "name": "DragonStack",
+  "version": "1.0.0",
+  "description": "DragonStack",
+  "main": "index.js",
+  "scripts": {
+   "start": "nf start",
+   "backend": "nodemon backend/bin/server.js",
+   "frontend": "parcel frontend/src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LEscobar-Driver/DragonStack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LEscobar-Driver/DragonStack/issues"
+  },
+  "homepage": "https://github.com/LEscobar-Driver/DragonStack#readme"
+}

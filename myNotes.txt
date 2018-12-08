@@ -54,3 +54,18 @@ DOM
 - React.js
     - Allows us to write mordern js and react sytax for our code & code will be portable to pretty much any browser 
       npm i babel-preset-env@1.6.1 babel-preset-react@6.42.1 babel-plugin-transform-class-properties@6.24.1 --save-dev
+
+- Start both the backend and the frontend in a single script.
+- Foreman
+    - a node tool which allows us to start multiple processes on a single window of the command line
+    - https://www.udemy.com/full-stack/learn/v4/t/lecture/11708274?start=0
+    
+- Procfile
+    - Foreman will use the Procfile to start the relevant processes. 
+
+- CORS corse origin resource sharing (to backend)
+    - middle ware to use in express application
+    - in backend - npm i cors@2.8.4
+
+- Same origin policy
+    - https://www.udemy.com/full-stack/learn/v4/t/lecture/11555806?start=0
