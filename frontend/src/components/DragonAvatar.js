@@ -14,9 +14,38 @@ const propertyMap = {
 };
 
 class DragonAvatar extends Component {
+
+    get DragonImage() {
+
+        const dragonPropertyMap = {};
+        console.log('DRAGON', this.props.dragon);
+        console.log('TRAITS', this.props.dragon.traits);
+
+        this.props.dragon.traits.forEach(trait => {
+            console.log('TRAIT666', trait);
+            const { traitType, traitValue } = trait;
+
+            dragonPropertyMap[traitType] = propertyMap[traitType][traitValue];
+        });
+
+        const { backgroundColor, build, pattern, size } = dragonPropertyMap;
+
+        const sizing = { width: size, height: size };
+
+        return (
+            <div className='dragon-avatar-image-wrapper'>
+                <div className='dragon-avatar-image-background' style={{ backgroundColor, ...sizing}}></div>
+                    <img src={pattern} className='dragon-avatar-image-pattern' style={{ ...sizing }}/>
+                    <img src={build} className='dragon-avatar-image' style={{ ...sizing }}/>
+            </div>
+        );
+    }
+
     render() {
         // props = properties inheritance from parent to child a data object
         const { dragon } = this.props.dragon;
+
+        if (!dragon.dragonId) return <div></div>;
 
         return (
             <div>
@@ -24,6 +53,7 @@ class DragonAvatar extends Component {
                 <span>Dragon Id: {dragon.dragonId}. </span>
 
                 {dragon.traits.map(trait => trait.traitValue).join(', ')}
+                { this.DragonImage }
             </div>
         )
     }

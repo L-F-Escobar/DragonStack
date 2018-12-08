@@ -70,3 +70,9 @@ DOM
 
 - Same origin policy
     - https://www.udemy.com/full-stack/learn/v4/t/lecture/11555806?start=0
+
+
+
+For the error with the ...sizing on the style this is the answer to that 
+npm i babel-plugin-transform-object-rest-spread --save-dev
+...and add "transform-object-rest-spread" to your .babelrc plugins section.
