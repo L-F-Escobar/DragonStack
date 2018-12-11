@@ -36,6 +36,7 @@ ls -l bin (should have executable permission)
 FRONT END NPM INSTALLS
 npm init -y
 npm i babel-preset-env@1.6.1 babel-preset-react@6.24.1 babel-plugin-transform-class-properties@6.24.1 --save-dev
+npm i react-bootstrap@0.32.1
 
 - <div> tag
     - a container unit that encapsulates other page elements and divides the HTML document into sections.
@@ -59,7 +60,7 @@ DOM
 - Foreman
     - a node tool which allows us to start multiple processes on a single window of the command line
     - https://www.udemy.com/full-stack/learn/v4/t/lecture/11708274?start=0
-    
+
 - Procfile
     - Foreman will use the Procfile to start the relevant processes. 
 
@@ -69,3 +70,9 @@ DOM
 
 - Same origin policy
     - https://www.udemy.com/full-stack/learn/v4/t/lecture/11555806?start=0
+
+
+
+For the error with the ...sizing on the style this is the answer to that 
+npm i babel-plugin-transform-object-rest-spread --save-dev
+...and add "transform-object-rest-spread" to your .babelrc plugins section.
