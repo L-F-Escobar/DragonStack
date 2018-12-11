@@ -80,3 +80,9 @@ npm i babel-plugin-transform-object-rest-spread --save-dev
 
 introducting redux into the project
 npm i redux@4.0.0 --save
+
+https://github.com/zalmoxisus/redux-devtools-extension
+
+Allows us to pass the store through the entire component tree
+right from the root
+npm i react-redux@5.0.7 --save

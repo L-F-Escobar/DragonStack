@@ -25,7 +25,6 @@ const DEFFAULT_PROPERTIES = {
 }
 
 class Dragon {
-    // ({ map/dict })
     // Non-ordered perameter
     constructor({ dragonId, bday, nickName, traits, generationId } = {}) {
         this.dragonId = dragonId || DEFFAULT_PROPERTIES.dragonId;

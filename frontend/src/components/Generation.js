@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 const DEFAULT_GENERATION = { generationId: "", expiration: ""};
 const MINIMUM_DELAY = 3000;
 
 // By extending, this class gets preloaded with a much of methods & properties.
 class Generation extends Component {
+    // state = this.props.generation;
     state = { generation: DEFAULT_GENERATION };
     timer = null;
     // constructor() {
@@ -24,7 +25,7 @@ class Generation extends Component {
         fetch("http://localhost:5000/generation")
             .then(response => response.json())
             .then(json => {
-                console.log('json:', json);
+                // console.log('json:', json);
 
                 this.setState({ generation: json.generation });
             })
@@ -46,6 +47,7 @@ class Generation extends Component {
     }
     
     render() {
+        console.log('this.props', this.props);
         // generation is an object
         const { generation } = this.state;
         // const generation = this.state.generation; //same thing
@@ -60,4 +62,6 @@ class Generation extends Component {
     }
 }
 
-export default Generation;
+const componentConnector = connect();
+
+export default componentConnector(Generation);

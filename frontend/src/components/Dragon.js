@@ -24,7 +24,7 @@ class Dragon extends Component {
         fetch("http://localhost:5000/dragon/new")
             .then( (response) => response.json())
             .then(json => {
-                console.log('JSON DOG:', json);
+                // console.log('JSON DOG:', json);
 
                 this.setState({ dragon: json.dragon });
             })
