@@ -18,10 +18,10 @@ class DragonAvatar extends Component {
     get DragonImage() {
 
         const dragonPropertyMap = {};
-        console.log('DRAGON', this.props.dragon);
-        console.log('TRAITS', this.props.dragon.traits);
+        console.log('DRAGON', this.props.dragon.dragon);
+        console.log('TRAITS', this.props.dragon.dragon.traits);
 
-        this.props.dragon.traits.forEach(trait => {
+        this.props.dragon.dragon.traits.forEach(trait => {
             console.log('TRAIT666', trait);
             const { traitType, traitValue } = trait;
 
