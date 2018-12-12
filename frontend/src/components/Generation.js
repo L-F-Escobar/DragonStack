@@ -24,7 +24,7 @@ class Generation extends Component {
         fetch("http://localhost:5000/generation")
             .then(response => response.json())
             .then(json => {
-                console.log('json:', json);
+                console.log('Generation JSON:', json);
 
                 this.setState({ generation: json.generation });
             })
@@ -35,8 +35,7 @@ class Generation extends Component {
         this.fetchGeneration();
 
         // let allows us to re-assign the local variable later
-        let delay = new Date(this.state.generation.expiration).getTime() - 
-                    new Date().getTime();
+        let delay = new Date(this.state.generation.expiration).getTime() - new Date().getTime();
 
         if (delay < MINIMUM_DELAY) {
             delay = MINIMUM_DELAY;

@@ -18,11 +18,11 @@ class DragonAvatar extends Component {
     get DragonImage() {
 
         const dragonPropertyMap = {};
-        console.log('DRAGON', this.props.dragon.dragon);
-        console.log('TRAITS', this.props.dragon.dragon.traits);
+        // console.log('DRAGON', this.props.dragon.dragon);
+        // console.log('TRAITS', this.props.dragon.dragon.traits);
 
-        this.props.dragon.dragon.traits.forEach(trait => {
-            console.log('TRAIT666', trait);
+        this.props.dragon.traits.forEach(trait => {
+            // console.log('TRAIT666', trait);
             const { traitType, traitValue } = trait;
 
             dragonPropertyMap[traitType] = propertyMap[traitType][traitValue];
@@ -42,8 +42,11 @@ class DragonAvatar extends Component {
     }
 
     render() {
+        // console.log('PROPS', this.props);
+        // console.log('DRAGON', this.props.dragon);
+        
         // props = properties inheritance from parent to child a data object
-        const { dragon } = this.props.dragon;
+        const { dragon } = this.props;
 
         if (!dragon.dragonId) return <div></div>;
 
