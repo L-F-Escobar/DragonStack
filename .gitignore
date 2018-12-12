@@ -1,6 +1,7 @@
 node_modules
 backend/secrets/
 .cache
+.cache/
 dist
 DragonStack/frontend/.cache/
 DragonStack/frontend/.cache
